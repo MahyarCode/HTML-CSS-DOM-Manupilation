@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS file is linked => we can write CSS in separated file and link it to html -->
+    <link href="style.css" rel="stylesheet">
+
+    
+    <title>Learning HTML & CSS</title>
+</head>
+<body>
+    <h1>Javascript is fun, but also is HTML & CSS</h1>
+
+    <p class="first">You can learn javascript without HTML and CSS, but for DOM manipulation it's useful to have basic idea of HTML and CSS.</p>
+
+    <h2>Another Heading.</h2>
+
+    <h6>Another Heading</h6>
+
+    <!-- Class can be used Multiple times in different paragraphs -->
+    <p class="second">
+        Just another Paragraph with link which you can learn more about it in
+        <a href="https://github.com/MahyarCode">this</a> link
+
+    </p>
+
+    <!-- images don't have Closing Tags.
+         "id" != class, they should be unique -->
+    <img id="course-image" src="https://avatars.githubusercontent.com/u/145290973?v=4">
+
+    <!-- here is like a box -->
+    <!-- we can also use "form" instead of "div" as we created a form-->
+    <!-- it is better to put "form"; because we have input and button :D-->
+    <form id="your-name">
+        <h2>Your name here</h2>
+        <p class="first">Please fill in this form :D</p>
+
+        <!-- input doesn't have closing tag -->
+        <input type="text" placeholder="Your name">
+        <button>OK!</button>
+    </form>
+
+</body>
+</html>

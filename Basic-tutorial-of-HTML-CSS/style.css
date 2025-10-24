@@ -1,0 +1,99 @@
+/* we have couple of different selectors in CSS (Style) */
+
+/* we use "*" to select all the elements of the page */
+/* ! SELECTING EVERYTHING */
+
+* {
+    margin: 0;
+    padding: 0;
+    /* this "box-sizing: border-box" is important !!!! it allows each total size of each box to be fixed and doesn't change when we add margin and padding in it. */
+    box-sizing: border-box;
+}
+
+
+/* it selects every thing inside the "body" in HTML */
+/* ! BODY SELECTION */
+body {
+    background-color: rgb(231, 231, 215);
+    font-family: Arial;
+    font-size: 15px;
+    padding: 50px;
+    
+}
+
+/* it selects every thing inside the "h1" in HTML */
+/* ! H1 SELECTION */
+h1 {
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+/* it selects every thing inside the "h2" in HTML */
+/* ! H2 SELECTION */
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* it selects the "Class" : first in HTML */
+/* ! CLASS SELECTION */
+.first {
+    color: red;
+}
+
+/* it selects the "id" in HTML */
+/* ! ID SELECTION */
+#your-name {
+    background-color: rgb(242, 189, 189);
+    border: 3px solid #444;
+    width: 400px;
+    padding: 25px;
+    margin-top: 20px;
+}
+
+/* it selects the Paragraph in HTML */
+/*  ! PARAGRAPH SELECTION */
+p {
+    margin-bottom: 25px;
+
+}
+
+
+/* (MULTIPLE SELECTION !!!!) it selects the input & button in HTML */
+/*  ! INPUT SELECTION */
+/*  ! BUTTON SELECTION */
+input, button {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* it selects the Link in HTML */
+/*  ! LINK SELECTION */
+a {
+    background-color: rgb(184, 184, 255);
+    color: purple;
+}
+
+/* this is a child selector when we write a chile element inside an element */
+/*  ! CHILD SELECTOR */
+
+#your-name h2 {
+    color: olivedrab;
+}
+
+/* it selects the image element */
+/* ! IMAGE SELECTOR */
+/* you can select image by id ( to select only one of them ) or use "img" to select all of them */
+
+/* ! for all pictures */
+img {
+    width: 200px;
+}
+
+/* ! for a specific pictures (by id) */
+#course-image {
+   width: 200px;
+} 
+
+
+
