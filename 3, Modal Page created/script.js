@@ -36,3 +36,13 @@ for (let i = 0; i < btnsOpenModal.length; i++) {
 
 btnCloseModal.addEventListener('click', closeModal);
 overlay.addEventListener('click', closeModal);
+
+// TODO Adding the Esc key function to close modal
+// DESC it is a global event that is not only specific for a class or a button.
+// no selecting query 👇👇
+document.addEventListener('keydown', function (event) {
+  // console.log(event.key);
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
+  }
+});
