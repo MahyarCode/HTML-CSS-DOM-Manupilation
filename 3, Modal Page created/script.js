@@ -3,7 +3,6 @@
 const modal = document.querySelector('.modal');
 const overlay = document.querySelector('.overlay');
 const btnCloseModal = document.querySelector('.close-modal');
-
 const btnsOpenModal = document.querySelectorAll('.show-modal');
 //DESC the above line, will select the all elements which is '.show-modal' class. the querySelector only select the first one.
 // console.log(btnsOpenModal);

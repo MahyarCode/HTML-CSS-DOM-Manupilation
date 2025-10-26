@@ -1,0 +1,76 @@
+{
+  "workbench.colorTheme": "One Dark Pro",
+  "security.workspace.trust.untrustedFiles": "open",
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.fontFamily": "Cascadia Code, Consolas, monospace",
+  "cSpell.userWords": ["mahyar"],
+  "editor.fontSize": 17,
+  "workbench.editor.empty.hint": "hidden",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "prettier.tabWidth": 4,
+"thunder-client.jsonFileIndentSize": 2,
+
+"editor.tokenColorCustomizations": {
+      "comments": {
+          "foreground": "#919191" // Example: Sets comment color to red
+      }
+  },
+
+"todohighlight.include": [
+
+  "**/*.js",
+  "**/*.jsx",
+  "**/*.ts",
+  "**/*.tsx",
+  "**/*.html",
+  "**/*.php",
+  "**/*.css",
+  "**/*.scss"
+],
+"todohighlight.keywords": [
+
+
+  {
+      "text": "TODO",
+      "color": "red",
+      "backgroundColor": "yellow",
+      // "isWholeLine": true,
+      "fontWeight": "bold", // Optional: make the text bold
+      "overviewRulerColor": "yellow", // Color in the scrollbar overview ruler
+  },
+  {
+      "text": "FIXME",
+      "color": "yellow",
+      "backgroundColor": "red",
+      // "isWholeLine": true,
+      "fontWeight": "bold", // Optional: make the text bold
+      "overviewRulerColor": "yellow", // Color in the scrollbar overview ruler
+      
+  },
+  {
+      "text": "NOTE",
+      "color": "blue",
+      "backgroundColor": "gray",
+      // "isWholeLine": true,
+      "fontWeight": "bold", // Optional: make the text bold
+      "overviewRulerColor": "blue", // Color in the scrollbar overview ruler
+  },
+  {
+    "text": "DESC",
+    "color": "#00FF00",
+    "backgroundColor": "gray",
+    // "isWholeLine": true,
+    "fontWeight": "bold", // Optional: make the text bold
+    "overviewRulerColor": "#00FF00", // Color in the scrollbar overview ruler
+  }
+],
+"liveServer.settings.donotShowInfoMsg": true
+}
