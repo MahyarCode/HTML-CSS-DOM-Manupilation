@@ -438,3 +438,152 @@ document.addEventListener('keydown', function (e) {
 // });
 
 // headerObserver.observe(header);
+
+// // TODO each section is now invisible and we want them to smoothly pops up as we reach them
+// const allSections = document.querySelectorAll('.section');
+// const reveal = function (entries, observer) {
+//   entries.forEach(entry => {
+//     if (!entry.isIntersecting) return;
+//     entry.target.classList.remove('section--hidden');
+//     observer.unobserve(entry.target);
+//   });
+// };
+
+// const sectionObserver = new IntersectionObserver(reveal, {
+//   root: null,
+//   threshold: 0.15,
+// });
+
+// allSections.forEach(function (section) {
+//   sectionObserver.observe(section);
+//   section.classList.add('section--hidden');
+// });
+
+// // TODO Lazy loading images:
+// const imageTargets = document.querySelectorAll('img[data-src]'); // selecting elements img where have the 'data-src' attribute.
+
+// const loadImg = function (entries, observer) {
+//   const [entry] = entries;
+
+//   if (!entry.isIntersecting) return;
+
+//   // NOTE 1. replacing src with data-src
+//   entry.target.src = entry.target.dataset.src;
+
+//   // NOTE 2. removing the lazy-img class from the img (removing blur)
+//   entry.target.addEventListener('load', function () {
+//     entry.target.classList.remove('lazy-img');
+//   });
+//   observer.unobserve(entry.target);
+// };
+
+// const imageObserver = new IntersectionObserver(loadImg, {
+//   root: null,
+//   threshold: 0,
+//   rootMargin: '100px',
+// });
+// imageTargets.forEach(img => imageObserver.observe(img));
+
+// // TODO Slider
+// const btnLeft = document.querySelector('.slider__btn--left');
+// const btnRight = document.querySelector('.slider__btn--right');
+// const slides = document.querySelectorAll('.slide');
+// // NOTE Separating slides:
+// slides.forEach(
+//   (slide, index) => (slide.style.transform = `translateX(${index * 100}%)`)
+// );
+
+// // NOTE create dots:
+// const dotContainer = document.querySelector('.dots');
+// function createDots() {
+//   slides.forEach(function (_, i) {
+//     dotContainer.insertAdjacentHTML(
+//       'beforeend',
+//       `<button class="dots__dot" data-slide="${i}"></button>`
+//     );
+//   });
+// }
+
+// // NOTE Activating the slide dot
+// function activateDot(slide) {
+//   document
+//     .querySelectorAll('.dots__dot')
+//     .forEach(dot => dot.classList.remove('dots__dot--active'));
+
+//   document
+//     .querySelector(`.dots__dot[data-slide="${slide}"]`)
+//     .classList.add('dots__dot--active');
+// }
+
+// // NOTE Start Sliding through slides:
+// function goToSlide(slide) {
+//   slides.forEach(
+//     (s, i) => (s.style.transform = `translateX(${(i - slide) * 100}%)`)
+//   );
+// }
+
+// function nextSlide() {
+//   if (currentSlide === slides.length - 1) currentSlide = -1;
+//   currentSlide++;
+//   goToSlide(currentSlide);
+//   activateDot(currentSlide);
+// }
+
+// function leftSlide() {
+//   if (currentSlide === 0) currentSlide = slides.length;
+
+//   currentSlide--;
+//   goToSlide(currentSlide);
+//   activateDot(currentSlide);
+// }
+
+// // NOTE Initialization function
+// function init() {
+//   createDots();
+//   goToSlide(0);
+//   activateDot(0);
+// }
+
+// // DESC initialize the slider
+// init();
+// let currentSlide = 0;
+
+// // DESC Slider Operations:
+// btnRight.addEventListener('click', nextSlide);
+// btnLeft.addEventListener('click', leftSlide);
+
+// document.addEventListener('keydown', function (e) {
+//   if (e.key === 'ArrowRight') nextSlide();
+//   e.key === 'ArrowLeft' && leftSlide();
+// });
+
+// dotContainer.addEventListener('click', function (e) {
+//   if (e.target.classList.contains('dots__dot')) {
+//     currentSlide = Number(e.target.dataset.slide);
+//     goToSlide(currentSlide);
+//     activateDot(currentSlide);
+//   }
+// });
+
+// // TODO Some DOM Events:
+
+// document.addEventListener('DOMContentLoaded', function (e) {
+//   console.log('HTML parsed and DOM tree build!', e);
+// });
+
+// /* NOTE
+// in jQuery and Vanilla javascript, it was needed to export a document.ready() event to run the whole page. but nowadays, we use the <script>Tutorial.js</script> in HTML file to run the js code.
+// */
+
+// window.addEventListener('load', function (e) {
+//   console.log('page fully loaded (HTML, DOM tree, CSS, Images, and etc.)', e);
+// });
+
+// // DESC the following code is executed when user wants to reload or leave the webpage
+// window.addEventListener('beforeunload', function (e) {
+//   e.preventDefault();
+//   console.log(e);
+
+// });
+
+// TODO Efficient script loading: Defer and Async script loading
